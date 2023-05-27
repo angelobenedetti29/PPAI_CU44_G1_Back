@@ -2,5 +2,8 @@
 {
     public class CambioDeEstado
     {
+        public DateTime fechaHoraInicio { get; set; }
+        public Estado? estado { get; set; }
+
     }
 }

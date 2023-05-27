@@ -2,5 +2,7 @@
 {
     public class Pregunta
     {
+        public string pregunta { get; set; }
+        public List<RespuestaPosible> respuesta { get; set; }
     }
 }
