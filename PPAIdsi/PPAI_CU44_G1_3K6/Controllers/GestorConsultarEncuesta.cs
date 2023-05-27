@@ -27,9 +27,15 @@ namespace PPAI_CU44_G1_3K6.Controllers
             Cliente cliente1 = new Cliente
             {
                 dni = 42977233,
-                nombreCompleto = "Bessone Luca",
+                nombreCompleto = "Gustavo Cerati",
                 numeroCelular = 3511234567,
+            };
 
+            Cliente cliente2 = new Cliente
+            {
+                dni = 42897654,
+                nombreCompleto = "Carlos Alberto Garcia",
+                numeroCelular = 2012012012,
             };
 
             //Estados
@@ -48,6 +54,18 @@ namespace PPAI_CU44_G1_3K6.Controllers
             {
                 fechaHoraInicio = new DateTime(2023, 04, 04, 10, 20, 00),
                 estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado2 = new CambioDeEstado
+            {
+                fechaHoraInicio = new DateTime(2023, 03, 03, 10, 20, 00),
+                estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado3 = new CambioDeEstado
+            {
+                fechaHoraInicio = new DateTime(2023, 03, 04, 10, 20, 00),
+                estado = finalizado,
             };
 
             //RespuestaPosible
@@ -84,6 +102,14 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 respuestaPosible = respuesta1
             };
 
+            RespuestaDeCliente respuestaCliente2 = new RespuestaDeCliente
+            {
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta2
+            };
+
+            //Llamadas
+
             Llamada llamada1 = new Llamada
             {
                 descripcionOperador = 1,
@@ -91,12 +117,24 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 duracion = 3,
                 encuestaEnviada = 1,
                 observacionAuditor = 1,
-                cliente = cliente1,
+                cliente = cliente2,
                 cambioDeEstado = new List<CambioDeEstado?> { cambioEstado1 },
+                respuestaDeCliente = respuestaCliente2
+            };
+
+            Llamada llamada2 = new Llamada
+            {
+                descripcionOperador = 2,
+                detalleAccionRequerida = 1,
+                duracion = 5,
+                encuestaEnviada = 1,
+                observacionAuditor = 1,
+                cliente = cliente1,
+                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado2, cambioEstado3 },
                 respuestaDeCliente = respuestaCliente1
             };
 
-            List<Llamada> llamadas = new List<Llamada> { llamada1 };
+            List<Llamada> llamadas = new List<Llamada> { llamada1, llamada2 };
             #endregion
 
             List<Llamada> lista = buscarLlamadasConEncRespondidas(llamadas, fechaInicio, fechaFin);
