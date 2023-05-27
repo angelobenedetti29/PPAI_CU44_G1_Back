@@ -2,7 +2,7 @@
 {
     public class RespuestaPosible
     {
-        public DateTime fechaEncuesta { get; set; }
-        public RespuestaPosible respuestaPosible { get; set; }
+        public string descripcion { get; set; }
+        public string valor { get; set; }
     }
 }

@@ -4,6 +4,6 @@
     {
         public int dni { get; set; }
         public string nombreCompleto { get; set; }
-        public int numeroCelular { get; set; }
+        public uint numeroCelular { get; set; }
     }
 }

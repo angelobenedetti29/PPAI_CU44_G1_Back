@@ -4,5 +4,10 @@
     {
         public string nombre { get; set; }
 
+        public bool esIniciado()
+        {
+            return this.nombre.Equals("Inicial");
+        }
+
     }
 }

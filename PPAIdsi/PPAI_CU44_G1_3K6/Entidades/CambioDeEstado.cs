@@ -5,5 +5,13 @@
         public DateTime fechaHoraInicio { get; set; }
         public Estado? estado { get; set; }
 
+        public bool esEstadoInicial()
+        {
+            return this.estado.esIniciado();
+        }
+        public DateTime getFechaHoraInicio()
+        {
+            return this.fechaHoraInicio;
+        }
     }
 }
