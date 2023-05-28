@@ -18,13 +18,22 @@ namespace PPAI_CU44_G1_3K6.Entidades
         {
             foreach (var cambioDeEstado in this.cambioDeEstado)
             {
-                if(cambioDeEstado.esEstadoInicial())
+                if(esDePeriodo(cambioDeEstado, fechaInicio, fechaFin))
                 {
-                    var fechaHoraInicioEstado = cambioDeEstado.getFechaHoraInicio();
-                    if (DateTime.Compare(fechaHoraInicioEstado, fechaInicio) > 0 && DateTime.Compare(fechaHoraInicioEstado, fechaFin) < 0)
-                    {
-                        return true;
-                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool esDePeriodo(CambioDeEstado cambioDeEstado, DateTime fechaInicio, DateTime fechaFin)
+        {
+            if (cambioDeEstado.esEstadoInicial())
+            {
+                var fechaHoraInicioEstado = cambioDeEstado.getFechaHoraInicio();
+                if (DateTime.Compare(fechaHoraInicioEstado, fechaInicio) > 0 && DateTime.Compare(fechaHoraInicioEstado, fechaFin) < 0)
+                {
+                    return true;
                 }
             }
             return false;
