@@ -9,5 +9,9 @@
             return this.nombre.Equals("Inicial");
         }
 
+        public string getNombre()
+        {
+            return this.nombre;
+        }
     }
 }

@@ -4,5 +4,12 @@
     {
         public string descripcion { get; set; }
         public string valor { get; set; }
+
+
+        public string getDescripcionRespuesta()
+        {
+            return this.descripcion;
+        }
     }
+
 }

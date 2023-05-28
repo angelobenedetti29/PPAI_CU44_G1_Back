@@ -2,7 +2,9 @@
 {
     public class CambioDeEstado
     {
+        public int id { get; set; }
         public DateTime fechaHoraInicio { get; set; }
+        public DateTime? fechaHoraFin { get; set; }
         public Estado? estado { get; set; }
 
         public bool esEstadoInicial()
@@ -12,6 +14,15 @@
         public DateTime getFechaHoraInicio()
         {
             return this.fechaHoraInicio;
+        }
+
+        public string esUltimoEstado()
+        {
+            if(this.fechaHoraFin == null)
+            {
+                return this.estado.getNombre();
+            }
+            return string.Empty;
         }
     }
 }
