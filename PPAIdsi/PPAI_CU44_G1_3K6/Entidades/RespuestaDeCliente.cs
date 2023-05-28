@@ -2,7 +2,13 @@
 {
     public class RespuestaDeCliente
     {
-        public string descripcion { get; set; }
-        public string valor { get; set; }
+        public int id { get; set; }
+        public DateTime fechaEncuesta { get; set; }
+        public RespuestaPosible respuestaPosible { get; set; }
+        
+        public string getDescripcionRespuesta()
+        {
+            return this.respuestaPosible.getDescripcionRespuesta();
+        }
     }
 }
