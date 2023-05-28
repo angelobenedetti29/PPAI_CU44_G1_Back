@@ -167,7 +167,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("api/tomarSeleccionLlamada")]
         //crear objeto llamadaseleccionada
         //string nombre, string estado, string duracion, string descripcionEncuesta, lista de objetos de abajo
@@ -175,7 +175,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
         //creo objeto PreguntaRespuesta y paso lista de esos
         //atributos:
         //string pregunta, string respuesta
-        public LlamadaSeleccionada tomarSeleccionLlamada(int seleccionadoLlamada)
+        public LlamadaSeleccionada tomarSeleccionLlamada(Llamada seleccionadoLlamada)
         {
             #region objetos
             //Clientes
@@ -307,7 +307,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
             Llamada seleccion = new Llamada();
             foreach(var llamada in llamadas)
             {
-                if (llamada.id == seleccionadoLlamada)
+                if (llamada.id == seleccionadoLlamada.id)
                 {
                     seleccion = llamada;
                     break;
