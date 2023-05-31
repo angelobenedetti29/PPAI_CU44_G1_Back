@@ -8,7 +8,8 @@
         public List<Pregunta> preguntas { get; set; }
 
         #region objetos
-         static RespuestaPosible respuesta1 = new RespuestaPosible
+        //RespuestaPosible
+        static RespuestaPosible respuesta1 = new RespuestaPosible
         {
             valor = "1",
             descripcion = "Si"
@@ -19,6 +20,24 @@
             descripcion = "No"
         };
 
+        static RespuestaPosible respuesta3 = new RespuestaPosible
+        {
+            valor = "3",
+            descripcion = "Malo"
+        };
+
+        static RespuestaPosible respuesta4 = new RespuestaPosible
+        {
+            valor = "5",
+            descripcion = "Regular"
+        };
+
+        static RespuestaPosible respuesta5 = new RespuestaPosible
+        {
+            valor = "5",
+            descripcion = "Bueno"
+        };
+
         //Pregunta
         static Pregunta pregunta1 = new Pregunta
         {
@@ -27,13 +46,20 @@
             respuesta = new List<RespuestaPosible> { respuesta1, respuesta2 }
         };
 
+        static Pregunta pregunta2 = new Pregunta
+        {
+            valor = 2,
+            pregunta = "Describa el servicio",
+            respuesta = new List<RespuestaPosible> { respuesta3, respuesta4, respuesta5 }
+        };
+
         //Encuesta
         static Encuesta encuestaSatisfaccion = new Encuesta
         {
             id = 1,
             descripcion = "Encuesta de satisfacción",
             fechaFinVigencia = new DateTime(2024, 04, 04, 10, 20, 00),
-            preguntas = new List<Pregunta> { pregunta1 }
+            preguntas = new List<Pregunta> { pregunta1, pregunta2 }
         };
 
         //RespuestaDeCliente
@@ -49,6 +75,20 @@
             id = 2,
             fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
             respuestaPosible = respuesta2
+        };
+
+        static RespuestaDeCliente respuestaCliente3 = new RespuestaDeCliente
+        {
+            id = 3,
+            fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+            respuestaPosible = respuesta4
+        };
+
+        static RespuestaDeCliente respuestaCliente4 = new RespuestaDeCliente
+        {
+            id = 4,
+            fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+            respuestaPosible = respuesta5
         };
         #endregion
 

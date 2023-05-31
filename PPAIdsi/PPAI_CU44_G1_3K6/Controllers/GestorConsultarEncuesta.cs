@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PPAI_CU44_G1_3K6.Entidades;
 using PPAI_CU44_G1_3K6.ViewModel;
+using System.Text;
 
 namespace PPAI_CU44_G1_3K6.Controllers
 {
@@ -87,6 +88,24 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 descripcion = "No"
             };
 
+            RespuestaPosible respuesta3 = new RespuestaPosible
+            {
+                valor = "3",
+                descripcion = "Malo"
+            };
+
+            RespuestaPosible respuesta4 = new RespuestaPosible
+            {
+                valor = "5",
+                descripcion = "Regular"
+            };
+
+            RespuestaPosible respuesta5 = new RespuestaPosible
+            {
+                valor = "5",
+                descripcion = "Bueno"
+            };
+
             //Pregunta
             Pregunta pregunta1 = new Pregunta
             {
@@ -95,13 +114,20 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 respuesta = new List<RespuestaPosible> { respuesta1, respuesta2 }
             };
 
+            Pregunta pregunta2 = new Pregunta
+            {
+                valor = 2,
+                pregunta = "Describa el servicio",
+                respuesta = new List<RespuestaPosible> { respuesta3, respuesta4, respuesta5 }
+            };
+
             //Encuesta
             Encuesta encuestaSatisfaccion = new Encuesta
             {
                 id = 1,
                 descripcion = "Encuesta de satisfacción",
                 fechaFinVigencia = new DateTime(2024, 04, 04, 10, 20, 00),
-                preguntas = new List<Pregunta> { pregunta1 }
+                preguntas = new List<Pregunta> { pregunta1, pregunta2 }
             };
 
             //RespuestaDeCliente
@@ -119,6 +145,20 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 respuestaPosible = respuesta2
             };
 
+            RespuestaDeCliente respuestaCliente3 = new RespuestaDeCliente
+            {
+                id = 3,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta4
+            };
+
+            RespuestaDeCliente respuestaCliente4 = new RespuestaDeCliente
+            {
+                id = 4,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta5
+            };
+
             //Llamadas
 
             Llamada llamada1 = new Llamada
@@ -131,7 +171,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 observacionAuditor = 1,
                 cliente = cliente2,
                 cambioDeEstado = new List<CambioDeEstado?> { cambioEstado1 },
-                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente2 }
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente2, respuestaCliente3 }
             };
 
             Llamada llamada2 = new Llamada
@@ -144,7 +184,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 observacionAuditor = 1,
                 cliente = cliente1,
                 cambioDeEstado = new List<CambioDeEstado?> { cambioEstado2, cambioEstado3 },
-                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente1 }
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente1, respuestaCliente4 }
             };
 
             List<Llamada> llamadas = new List<Llamada> { llamada1, llamada2 };
@@ -241,6 +281,24 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 descripcion = "No"
             };
 
+            RespuestaPosible respuesta3 = new RespuestaPosible
+            {
+                valor = "3",
+                descripcion = "Malo"
+            };
+
+            RespuestaPosible respuesta4 = new RespuestaPosible
+            {
+                valor = "5",
+                descripcion = "Regular"
+            };
+
+            RespuestaPosible respuesta5 = new RespuestaPosible
+            {
+                valor = "5",
+                descripcion = "Bueno"
+            };
+
             //Pregunta
             Pregunta pregunta1 = new Pregunta
             {
@@ -249,13 +307,20 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 respuesta = new List<RespuestaPosible> { respuesta1, respuesta2 }
             };
 
+            Pregunta pregunta2 = new Pregunta
+            {
+                valor = 2,
+                pregunta = "Describa el servicio",
+                respuesta = new List<RespuestaPosible> { respuesta3, respuesta4, respuesta5 }
+            };
+
             //Encuesta
             Encuesta encuestaSatisfaccion = new Encuesta
             {
                 id = 1,
                 descripcion = "Encuesta de satisfacción",
                 fechaFinVigencia = new DateTime(2024, 04, 04, 10, 20, 00),
-                preguntas = new List<Pregunta> { pregunta1 }
+                preguntas = new List<Pregunta> { pregunta1, pregunta2 }
             };
 
             //RespuestaDeCliente
@@ -273,6 +338,20 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 respuestaPosible = respuesta2
             };
 
+            RespuestaDeCliente respuestaCliente3 = new RespuestaDeCliente
+            {
+                id = 3,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta4
+            };
+
+            RespuestaDeCliente respuestaCliente4 = new RespuestaDeCliente
+            {
+                id = 4,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta5
+            };
+
             //Llamadas
 
             Llamada llamada1 = new Llamada
@@ -285,7 +364,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 observacionAuditor = 1,
                 cliente = cliente2,
                 cambioDeEstado = new List<CambioDeEstado?> { cambioEstado1 },
-                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente2 }
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente2, respuestaCliente3 }
             };
 
             Llamada llamada2 = new Llamada
@@ -298,7 +377,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 observacionAuditor = 1,
                 cliente = cliente1,
                 cambioDeEstado = new List<CambioDeEstado?> { cambioEstado2, cambioEstado3 },
-                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente1 }
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente1, respuestaCliente4 }
             };
 
             List<Llamada> llamadas = new List<Llamada> { llamada1, llamada2 };
@@ -343,13 +422,24 @@ namespace PPAI_CU44_G1_3K6.Controllers
         }
 
 
-        [HttpGet]
+        [HttpPost]
         [Route("api/tomarOpcionDeImpresion")]
         //recibo objeto llamadaSeleccionada
         //devuelvo el csv creado
-        public string tomarOpcionDeImpresion()
+        public string tomarOpcionDeImpresion(LlamadaSeleccionada llamadaSelec)
         {
-            return "devolucion";
+            return generarCSV(llamadaSelec);
+            string generarCSV(LlamadaSeleccionada llamadaSeleccionada)
+            {
+                string csv = llamadaSeleccionada.nombre.ToString() + "," + llamadaSeleccionada.estado.ToString() + "," + llamadaSeleccionada.duracion.ToString();
+                foreach (var pregunta in llamadaSeleccionada.preguntaRespuestas)
+                {
+                    string pregRes = "\n►" + pregunta.pregunta + "," + pregunta.respuesta + "◄";
+                    csv = string.Concat(csv, pregRes);
+                }
+                var llamarMetodo = new LlamadaSeleccionada();
+                return llamarMetodo.generarCSV(csv);
+            };
         }
     }
 }

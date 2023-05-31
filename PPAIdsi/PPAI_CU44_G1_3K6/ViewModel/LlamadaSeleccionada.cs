@@ -1,4 +1,6 @@
-﻿namespace PPAI_CU44_G1_3K6.ViewModel
+﻿using System.Text;
+
+namespace PPAI_CU44_G1_3K6.ViewModel
 {
     public class LlamadaSeleccionada
     //crear objeto llamadaseleccionada
@@ -13,5 +15,17 @@
         public string duracion { get; set; }
         public string descripcionEncuesta { get; set; }
         public List<PreguntaRespuesta> preguntaRespuestas { get; set; }
+
+        public string generarCSV(string csv)
+        {
+            string ruta = @"H:\\PPAI_CU44_G1_Back\\PPAIdsi\\PPAI_CU44_G1_3K6\\llamada.csv";
+            using (FileStream fileStream = File.Create(ruta))
+            {
+                string contiene = csv;
+                byte[] data = Encoding.UTF8.GetBytes(contiene);
+                fileStream.Write(data, 0, data.Length);
+            }
+            return csv;
+        }
     }
 }
