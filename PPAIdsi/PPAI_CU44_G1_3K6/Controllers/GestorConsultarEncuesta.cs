@@ -29,7 +29,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
             Cliente cliente1 = new Cliente
             {
                 dni = 42977233,
-                nombreCompleto = "Gustavo Cerati",
+                nombreCompleto = "Gustavo Adrian Cerati",
                 numeroCelular = 3511234567,
             };
 
@@ -37,13 +37,44 @@ namespace PPAI_CU44_G1_3K6.Controllers
             {
                 dni = 42897654,
                 nombreCompleto = "Carlos Alberto Garcia",
-                numeroCelular = 2012012012,
+                numeroCelular = 3512012012,
+            };
+
+            Cliente cliente3 = new Cliente
+            {
+                dni = 35897635,
+                nombreCompleto = "Federico Moura",
+                numeroCelular = 3519122018,
+            };
+
+            Cliente cliente4 = new Cliente
+            {
+                dni = 36380465,
+                nombreCompleto = "Cristian Gabriel Alvarez",
+                numeroCelular = 3516380465,
+            };
+
+            Cliente cliente5 = new Cliente
+            {
+                dni = 20020020,
+                nombreCompleto = "Patricio Santos Fontanet",
+                numeroCelular = 3040274720,
             };
 
             //Estados
             Estado inicial = new Estado
             {
                 nombre = "Inicial"
+            };
+
+            Estado reconectando = new Estado
+            {
+                nombre = "Reconectando"
+            };
+
+            Estado reconectado = new Estado
+            {
+                nombre = "Reconectado"
             };
 
             Estado finalizado = new Estado
@@ -55,23 +86,111 @@ namespace PPAI_CU44_G1_3K6.Controllers
             CambioDeEstado cambioEstado1 = new CambioDeEstado
             {
                 id = 1,
-                fechaHoraInicio = new DateTime(2023, 04, 04, 10, 20, 00),
-                fechaHoraFin = null,
+                fechaHoraInicio = new DateTime(2023, 04, 04),
+                fechaHoraFin = new DateTime(2023, 04, 04),
                 estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado14 = new CambioDeEstado
+            {
+                id = 3,
+                fechaHoraInicio = new DateTime(2023, 04, 04),
+                fechaHoraFin = null,
+                estado = finalizado,
             };
 
             CambioDeEstado cambioEstado2 = new CambioDeEstado
             {
                 id = 2,
-                fechaHoraInicio = new DateTime(2023, 03, 03, 10, 20, 00),
-                fechaHoraFin = new DateTime(2023, 03, 03, 10, 20, 30),
+                fechaHoraInicio = new DateTime(2023, 05, 03),
+                fechaHoraFin = new DateTime(2023, 05, 03),
                 estado = inicial,
             };
 
             CambioDeEstado cambioEstado3 = new CambioDeEstado
             {
                 id = 3,
-                fechaHoraInicio = new DateTime(2023, 03, 04, 10, 20, 00),
+                fechaHoraInicio = new DateTime(2023, 05, 04),
+                fechaHoraFin = null,
+                estado = finalizado,
+            };
+
+            CambioDeEstado cambioEstado4 = new CambioDeEstado
+            {
+                id = 4,
+                fechaHoraInicio = new DateTime(2023, 04, 04),
+                fechaHoraFin = new DateTime(2023, 04, 04),
+                estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado5 = new CambioDeEstado
+            {
+                id = 5,
+                fechaHoraInicio = new DateTime(2023, 05, 04),
+                fechaHoraFin = new DateTime(2023, 05, 04),
+                estado = reconectando,
+            };
+
+            CambioDeEstado cambioEstado6 = new CambioDeEstado
+            {
+                id = 6,
+                fechaHoraInicio = new DateTime(2023, 05, 04),
+                fechaHoraFin = new DateTime(2023, 05, 04),
+                estado = reconectado,
+            };
+
+            CambioDeEstado cambioEstado7 = new CambioDeEstado
+            {
+                id = 7,
+                fechaHoraInicio = new DateTime(2023, 05, 04),
+                fechaHoraFin = null,
+                estado = finalizado,
+            };
+
+            CambioDeEstado cambioEstado8 = new CambioDeEstado
+            {
+                id = 8,
+                fechaHoraInicio = new DateTime(2023, 05, 04),
+                fechaHoraFin = new DateTime(2023, 05, 04),
+                estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado9 = new CambioDeEstado
+            {
+                id = 9,
+                fechaHoraInicio = new DateTime(2023, 05, 04),
+                fechaHoraFin = new DateTime(2023, 05, 04),
+                estado = reconectando,
+            };
+
+            CambioDeEstado cambioEstado10 = new CambioDeEstado
+            {
+                id = 10,
+                fechaHoraInicio = new DateTime(2023, 05, 04),
+                fechaHoraFin = new DateTime(2023, 05, 04),
+                estado = reconectado,
+            };
+
+            CambioDeEstado cambioEstado11 = new CambioDeEstado
+            {
+                id = 1,
+                fechaHoraInicio = new DateTime(2023, 05, 04),
+                fechaHoraFin = null,
+                estado = finalizado,
+            };
+
+            CambioDeEstado cambioEstado12 = new CambioDeEstado
+            {
+                id = 12,
+                fechaHoraInicio = new DateTime(2023, 05, 03),
+                fechaHoraFin = new DateTime(2023, 05, 03),
+                estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado13 = new CambioDeEstado
+            {
+                id = 13,
+                fechaHoraInicio = new DateTime(2023, 05, 04),
                 fechaHoraFin = null,
                 estado = finalizado,
             };
@@ -96,7 +215,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
 
             RespuestaPosible respuesta4 = new RespuestaPosible
             {
-                valor = "5",
+                valor = "4",
                 descripcion = "Regular"
             };
 
@@ -104,6 +223,59 @@ namespace PPAI_CU44_G1_3K6.Controllers
             {
                 valor = "5",
                 descripcion = "Bueno"
+            };
+
+            RespuestaPosible respuesta6 = new RespuestaPosible
+            {
+                valor = "6",
+                descripcion = "1 a 3"
+            };
+
+            RespuestaPosible respuesta7 = new RespuestaPosible
+            {
+                valor = "7",
+                descripcion = "3 o más"
+            };
+
+            RespuestaPosible respuesta8 = new RespuestaPosible
+            {
+                valor = "8",
+                descripcion = "1"
+            };
+
+            RespuestaPosible respuesta9 = new RespuestaPosible
+            {
+                valor = "9",
+                descripcion = "2"
+            };
+
+            RespuestaPosible respuesta10 = new RespuestaPosible
+            {
+                valor = "10",
+                descripcion = "3"
+            };
+
+            RespuestaPosible respuesta11 = new RespuestaPosible
+            {
+                valor = "11",
+                descripcion = "4"
+            };
+
+            RespuestaPosible respuesta12 = new RespuestaPosible
+            {
+                valor = "12",
+                descripcion = "5"
+            };
+
+            RespuestaPosible respuesta13 = new RespuestaPosible
+            {
+                valor = "13",
+                descripcion = "si"
+            };
+            RespuestaPosible respuesta14 = new RespuestaPosible
+            {
+                valor = "14",
+                descripcion = "no"
             };
 
             //Pregunta
@@ -121,42 +293,128 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 respuesta = new List<RespuestaPosible> { respuesta3, respuesta4, respuesta5 }
             };
 
+
+            Pregunta pregunta3 = new Pregunta
+            {
+                valor = 3,
+                pregunta = "¿Cuantas veces al mes solicita nuestra ayuda?",
+                respuesta = new List<RespuestaPosible> { respuesta6, respuesta7 }
+            };
+
+            Pregunta pregunta4 = new Pregunta
+            {
+                valor = 4,
+                pregunta = "Puntue del 1 al 5 la calidad de la llamada",
+                respuesta = new List<RespuestaPosible> { respuesta8, respuesta9, respuesta10, respuesta11, respuesta12 }
+            };
+
+            Pregunta pregunta5 = new Pregunta
+            {
+                valor = 5,
+                pregunta = "¿Se perdio la conexion de la llamada en algun momento?",
+                respuesta = new List<RespuestaPosible> { respuesta13, respuesta14 }
+            };
+
             //Encuesta
             Encuesta encuestaSatisfaccion = new Encuesta
             {
                 id = 1,
                 descripcion = "Encuesta de satisfacción",
-                fechaFinVigencia = new DateTime(2024, 04, 04, 10, 20, 00),
-                preguntas = new List<Pregunta> { pregunta1, pregunta2 }
+                fechaFinVigencia = new DateTime(2024, 04, 04),
+                preguntas = new List<Pregunta> { pregunta1, pregunta2, pregunta3 }
+            };
+
+            Encuesta encuestaCalidadLlamada = new Encuesta
+            {
+                id = 2,
+                descripcion = "Encuesta de calidad de llamada",
+                fechaFinVigencia = new DateTime(2024, 03, 03),
+                preguntas = new List<Pregunta> { pregunta4, pregunta5 }
             };
 
             //RespuestaDeCliente
             RespuestaDeCliente respuestaCliente1 = new RespuestaDeCliente
             {
                 id = 1,
-                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                fechaEncuesta = new DateTime(2023, 05, 05),
                 respuestaPosible = respuesta1
             };
 
             RespuestaDeCliente respuestaCliente2 = new RespuestaDeCliente
             {
                 id = 2,
-                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                fechaEncuesta = new DateTime(2023, 05, 05),
                 respuestaPosible = respuesta2
             };
 
             RespuestaDeCliente respuestaCliente3 = new RespuestaDeCliente
             {
                 id = 3,
-                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                fechaEncuesta = new DateTime(2023, 05, 05),
                 respuestaPosible = respuesta4
             };
 
             RespuestaDeCliente respuestaCliente4 = new RespuestaDeCliente
             {
                 id = 4,
-                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                fechaEncuesta = new DateTime(2023, 05, 05),
                 respuestaPosible = respuesta5
+            };
+
+            RespuestaDeCliente respuestaCliente5 = new RespuestaDeCliente
+            {
+                id = 5,
+                fechaEncuesta = new DateTime(2023, 05, 05),
+                respuestaPosible = respuesta7
+            };
+
+            RespuestaDeCliente respuestaCliente6 = new RespuestaDeCliente
+            {
+                id = 6,
+                fechaEncuesta = new DateTime(2023, 05, 05),
+                respuestaPosible = respuesta6
+            };
+
+            RespuestaDeCliente respuestaCliente7 = new RespuestaDeCliente
+            {
+                id = 7,
+                fechaEncuesta = new DateTime(2023, 05, 05),
+                respuestaPosible = respuesta8
+            };
+
+            RespuestaDeCliente respuestaCliente8 = new RespuestaDeCliente
+            {
+                id = 8,
+                fechaEncuesta = new DateTime(2023, 05, 05),
+                respuestaPosible = respuesta14
+            };
+
+            RespuestaDeCliente respuestaCliente9 = new RespuestaDeCliente
+            {
+                id = 9,
+                fechaEncuesta = new DateTime(2023, 05, 05),
+                respuestaPosible = respuesta10
+            };
+
+            RespuestaDeCliente respuestaCliente10 = new RespuestaDeCliente
+            {
+                id = 10,
+                fechaEncuesta = new DateTime(2023, 05, 05),
+                respuestaPosible = respuesta14
+            };
+
+            RespuestaDeCliente respuestaCliente11 = new RespuestaDeCliente
+            {
+                id = 11,
+                fechaEncuesta = new DateTime(2023, 05, 05),
+                respuestaPosible = respuesta12
+            };
+
+            RespuestaDeCliente respuestaCliente12 = new RespuestaDeCliente
+            {
+                id = 12,
+                fechaEncuesta = new DateTime(2023, 05, 05),
+                respuestaPosible = respuesta13
             };
 
             //Llamadas
@@ -170,8 +428,8 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 encuestaEnviada = 1,
                 observacionAuditor = 1,
                 cliente = cliente2,
-                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado1 },
-                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente2, respuestaCliente3 }
+                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado1, cambioEstado14 },
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente2, respuestaCliente3, respuestaCliente5 }
             };
 
             Llamada llamada2 = new Llamada
@@ -184,10 +442,49 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 observacionAuditor = 1,
                 cliente = cliente1,
                 cambioDeEstado = new List<CambioDeEstado?> { cambioEstado2, cambioEstado3 },
-                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente1, respuestaCliente4 }
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente1, respuestaCliente4, respuestaCliente6 }
             };
 
-            List<Llamada> llamadas = new List<Llamada> { llamada1, llamada2 };
+            Llamada llamada3 = new Llamada
+            {
+                id = 3,
+                descripcionOperador = 2,
+                detalleAccionRequerida = 1,
+                duracion = 15,
+                encuestaEnviada = 2,
+                observacionAuditor = 1,
+                cliente = cliente3,
+                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado4, cambioEstado5, cambioEstado6, cambioEstado7 },
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente7, respuestaCliente8 }
+            };
+
+            Llamada llamada4 = new Llamada
+            {
+                id = 4,
+                descripcionOperador = 2,
+                detalleAccionRequerida = 1,
+                duracion = 25,
+                encuestaEnviada = 2,
+                observacionAuditor = 1,
+                cliente = cliente4,
+                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado8, cambioEstado9, cambioEstado10, cambioEstado11 },
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente9, respuestaCliente10 }
+            };
+
+            Llamada llamada5 = new Llamada
+            {
+                id = 5,
+                descripcionOperador = 2,
+                detalleAccionRequerida = 1,
+                duracion = 43,
+                encuestaEnviada = 2,
+                observacionAuditor = 1,
+                cliente = cliente5,
+                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado12, cambioEstado13 },
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente11, respuestaCliente12 }
+            };
+
+            List<Llamada> llamadas = new List<Llamada> { llamada1, llamada2, llamada3, llamada4, llamada5 };
             #endregion
 
             List<Llamada> lista = buscarLlamadasConEncRespondidas(llamadas, fechaInicio, fechaFin);
@@ -222,7 +519,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
             Cliente cliente1 = new Cliente
             {
                 dni = 42977233,
-                nombreCompleto = "Gustavo Cerati",
+                nombreCompleto = "Gustavo Adrian Cerati",
                 numeroCelular = 3511234567,
             };
 
@@ -230,13 +527,44 @@ namespace PPAI_CU44_G1_3K6.Controllers
             {
                 dni = 42897654,
                 nombreCompleto = "Carlos Alberto Garcia",
-                numeroCelular = 2012012012,
+                numeroCelular = 3512012012,
+            };
+
+            Cliente cliente3 = new Cliente
+            {
+                dni = 35897635,
+                nombreCompleto = "Federico Moura",
+                numeroCelular = 3519122018,
+            };
+
+            Cliente cliente4 = new Cliente
+            {
+                dni = 36380465,
+                nombreCompleto = "Cristian Gabriel Alvarez",
+                numeroCelular = 3516380465,
+            };
+
+            Cliente cliente5 = new Cliente
+            {
+                dni = 20020020,
+                nombreCompleto = "Patricio Santos Fontanet",
+                numeroCelular = 3040274720,
             };
 
             //Estados
             Estado inicial = new Estado
             {
                 nombre = "Inicial"
+            };
+
+            Estado reconectando = new Estado
+            {
+                nombre = "Reconectando"
+            };
+
+            Estado reconectado = new Estado
+            {
+                nombre = "Reconectado"
             };
 
             Estado finalizado = new Estado
@@ -249,22 +577,110 @@ namespace PPAI_CU44_G1_3K6.Controllers
             {
                 id = 1,
                 fechaHoraInicio = new DateTime(2023, 04, 04, 10, 20, 00),
-                fechaHoraFin = null,
+                fechaHoraFin = new DateTime(2023, 04, 04, 10, 25, 00),
                 estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado14 = new CambioDeEstado
+            {
+                id = 3,
+                fechaHoraInicio = new DateTime(2023, 04, 04, 10, 25, 00),
+                fechaHoraFin = null,
+                estado = finalizado,
             };
 
             CambioDeEstado cambioEstado2 = new CambioDeEstado
             {
                 id = 2,
-                fechaHoraInicio = new DateTime(2023, 03, 03, 10, 20, 00),
-                fechaHoraFin = new DateTime(2023, 03, 03, 10, 20, 30),
+                fechaHoraInicio = new DateTime(2023, 05, 01, 10, 20, 00),
+                fechaHoraFin = new DateTime(2023, 05, 03, 10, 20, 30),
                 estado = inicial,
             };
 
             CambioDeEstado cambioEstado3 = new CambioDeEstado
             {
                 id = 3,
-                fechaHoraInicio = new DateTime(2023, 03, 04, 10, 20, 00),
+                fechaHoraInicio = new DateTime(2023, 05, 04, 10, 20, 00),
+                fechaHoraFin = null,
+                estado = finalizado,
+            };
+
+            CambioDeEstado cambioEstado4 = new CambioDeEstado
+            {
+                id = 4,
+                fechaHoraInicio = new DateTime(2023, 04, 04, 10, 20, 00),
+                fechaHoraFin = new DateTime(2023, 04, 04, 10, 22, 00),
+                estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado5 = new CambioDeEstado
+            {
+                id = 5,
+                fechaHoraInicio = new DateTime(2023, 05, 04, 10, 22, 00),
+                fechaHoraFin = new DateTime(2023, 05, 04, 10, 23, 00),
+                estado = reconectando,
+            };
+
+            CambioDeEstado cambioEstado6 = new CambioDeEstado
+            {
+                id = 6,
+                fechaHoraInicio = new DateTime(2023, 05, 04, 10, 23, 00),
+                fechaHoraFin = new DateTime(2023, 05, 04, 10, 29, 00),
+                estado = reconectado,
+            };
+
+            CambioDeEstado cambioEstado7 = new CambioDeEstado
+            {
+                id = 7,
+                fechaHoraInicio = new DateTime(2023, 05, 04, 10, 29, 00),
+                fechaHoraFin = null,
+                estado = finalizado,
+            };
+
+            CambioDeEstado cambioEstado8 = new CambioDeEstado
+            {
+                id = 8,
+                fechaHoraInicio = new DateTime(2023, 05, 04, 10, 20, 00),
+                fechaHoraFin = new DateTime(2023, 05, 04, 10, 22, 00),
+                estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado9 = new CambioDeEstado
+            {
+                id = 9,
+                fechaHoraInicio = new DateTime(2023, 05, 04, 10, 22, 00),
+                fechaHoraFin = new DateTime(2023, 05, 04, 10, 23, 00),
+                estado = reconectando,
+            };
+
+            CambioDeEstado cambioEstado10 = new CambioDeEstado
+            {
+                id = 10,
+                fechaHoraInicio = new DateTime(2023, 05, 04, 10, 23, 00),
+                fechaHoraFin = new DateTime(2023, 05, 04, 10, 29, 00),
+                estado = reconectado,
+            };
+
+            CambioDeEstado cambioEstado11 = new CambioDeEstado
+            {
+                id = 1,
+                fechaHoraInicio = new DateTime(2023, 05, 04, 10, 29, 00),
+                fechaHoraFin = null,
+                estado = finalizado,
+            };
+
+            CambioDeEstado cambioEstado12 = new CambioDeEstado
+            {
+                id = 12,
+                fechaHoraInicio = new DateTime(2023, 05, 03, 10, 20, 00),
+                fechaHoraFin = new DateTime(2023, 05, 03, 10, 20, 30),
+                estado = inicial,
+            };
+
+            CambioDeEstado cambioEstado13 = new CambioDeEstado
+            {
+                id = 13,
+                fechaHoraInicio = new DateTime(2023, 05, 04, 10, 20, 00),
                 fechaHoraFin = null,
                 estado = finalizado,
             };
@@ -289,7 +705,7 @@ namespace PPAI_CU44_G1_3K6.Controllers
 
             RespuestaPosible respuesta4 = new RespuestaPosible
             {
-                valor = "5",
+                valor = "4",
                 descripcion = "Regular"
             };
 
@@ -297,6 +713,59 @@ namespace PPAI_CU44_G1_3K6.Controllers
             {
                 valor = "5",
                 descripcion = "Bueno"
+            };
+
+            RespuestaPosible respuesta6 = new RespuestaPosible
+            {
+                valor = "6",
+                descripcion = "1 a 3"
+            };
+
+            RespuestaPosible respuesta7 = new RespuestaPosible
+            {
+                valor = "7",
+                descripcion = "3 o más"
+            };
+
+            RespuestaPosible respuesta8 = new RespuestaPosible
+            {
+                valor = "8",
+                descripcion = "1"
+            };
+
+            RespuestaPosible respuesta9 = new RespuestaPosible
+            {
+                valor = "9",
+                descripcion = "2"
+            };
+
+            RespuestaPosible respuesta10 = new RespuestaPosible
+            {
+                valor = "10",
+                descripcion = "3"
+            };
+
+            RespuestaPosible respuesta11 = new RespuestaPosible
+            {
+                valor = "11",
+                descripcion = "4"
+            };
+
+            RespuestaPosible respuesta12 = new RespuestaPosible
+            {
+                valor = "12",
+                descripcion = "5"
+            };
+
+            RespuestaPosible respuesta13 = new RespuestaPosible
+            {
+                valor = "13",
+                descripcion = "si"
+            };
+            RespuestaPosible respuesta14 = new RespuestaPosible
+            {
+                valor = "14",
+                descripcion = "no"
             };
 
             //Pregunta
@@ -314,13 +783,43 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 respuesta = new List<RespuestaPosible> { respuesta3, respuesta4, respuesta5 }
             };
 
+
+            Pregunta pregunta3 = new Pregunta
+            {
+                valor = 3,
+                pregunta = "¿Cuantas veces al mes solicita nuestra ayuda?",
+                respuesta = new List<RespuestaPosible> { respuesta6, respuesta7 }
+            };
+
+            Pregunta pregunta4 = new Pregunta
+            {
+                valor = 4,
+                pregunta = "Puntue del 1 al 5 la calidad de la llamada",
+                respuesta = new List<RespuestaPosible> { respuesta8, respuesta9, respuesta10, respuesta11, respuesta12 }
+            };
+
+            Pregunta pregunta5 = new Pregunta
+            {
+                valor = 5,
+                pregunta = "¿Se perdio la conexion de la llamada en algun momento?",
+                respuesta = new List<RespuestaPosible> { respuesta13, respuesta14 }
+            };
+
             //Encuesta
             Encuesta encuestaSatisfaccion = new Encuesta
             {
                 id = 1,
                 descripcion = "Encuesta de satisfacción",
                 fechaFinVigencia = new DateTime(2024, 04, 04, 10, 20, 00),
-                preguntas = new List<Pregunta> { pregunta1, pregunta2 }
+                preguntas = new List<Pregunta> { pregunta1, pregunta2, pregunta3 }
+            };
+
+            Encuesta encuestaCalidadLlamada = new Encuesta
+            {
+                id = 2,
+                descripcion = "Encuesta de calidad de llamada",
+                fechaFinVigencia = new DateTime(2024, 03, 03, 00, 00, 00),
+                preguntas = new List<Pregunta> { pregunta4, pregunta5 }
             };
 
             //RespuestaDeCliente
@@ -352,6 +851,62 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 respuestaPosible = respuesta5
             };
 
+            RespuestaDeCliente respuestaCliente5 = new RespuestaDeCliente
+            {
+                id = 5,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta7
+            };
+
+            RespuestaDeCliente respuestaCliente6 = new RespuestaDeCliente
+            {
+                id = 6,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta6
+            };
+
+            RespuestaDeCliente respuestaCliente7 = new RespuestaDeCliente
+            {
+                id = 7,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta8
+            };
+
+            RespuestaDeCliente respuestaCliente8 = new RespuestaDeCliente
+            {
+                id = 8,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta14
+            };
+
+            RespuestaDeCliente respuestaCliente9 = new RespuestaDeCliente
+            {
+                id = 9,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta10
+            };
+
+            RespuestaDeCliente respuestaCliente10 = new RespuestaDeCliente
+            {
+                id = 10,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta14
+            };
+
+            RespuestaDeCliente respuestaCliente11 = new RespuestaDeCliente
+            {
+                id = 11,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta12
+            };
+
+            RespuestaDeCliente respuestaCliente12 = new RespuestaDeCliente
+            {
+                id = 12,
+                fechaEncuesta = new DateTime(2023, 05, 05, 10, 20, 00),
+                respuestaPosible = respuesta13
+            };
+
             //Llamadas
 
             Llamada llamada1 = new Llamada
@@ -363,8 +918,8 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 encuestaEnviada = 1,
                 observacionAuditor = 1,
                 cliente = cliente2,
-                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado1 },
-                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente2, respuestaCliente3 }
+                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado1, cambioEstado14 },
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente2, respuestaCliente3, respuestaCliente5 }
             };
 
             Llamada llamada2 = new Llamada
@@ -377,10 +932,49 @@ namespace PPAI_CU44_G1_3K6.Controllers
                 observacionAuditor = 1,
                 cliente = cliente1,
                 cambioDeEstado = new List<CambioDeEstado?> { cambioEstado2, cambioEstado3 },
-                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente1, respuestaCliente4 }
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente1, respuestaCliente4, respuestaCliente6 }
             };
 
-            List<Llamada> llamadas = new List<Llamada> { llamada1, llamada2 };
+            Llamada llamada3 = new Llamada
+            {
+                id = 3,
+                descripcionOperador = 2,
+                detalleAccionRequerida = 1,
+                duracion = 15,
+                encuestaEnviada = 2,
+                observacionAuditor = 1,
+                cliente = cliente3,
+                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado4, cambioEstado5, cambioEstado6, cambioEstado7 },
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente7, respuestaCliente8 }
+            };
+
+            Llamada llamada4 = new Llamada
+            {
+                id = 4,
+                descripcionOperador = 2,
+                detalleAccionRequerida = 1,
+                duracion = 25,
+                encuestaEnviada = 2,
+                observacionAuditor = 1,
+                cliente = cliente4,
+                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado8, cambioEstado9, cambioEstado10, cambioEstado11 },
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente9, respuestaCliente10 }
+            };
+
+            Llamada llamada5 = new Llamada
+            {
+                id = 5,
+                descripcionOperador = 2,
+                detalleAccionRequerida = 1,
+                duracion = 43,
+                encuestaEnviada = 2,
+                observacionAuditor = 1,
+                cliente = cliente5,
+                cambioDeEstado = new List<CambioDeEstado?> { cambioEstado12, cambioEstado13 },
+                respuestaDeCliente = new List<RespuestaDeCliente> { respuestaCliente11, respuestaCliente12 }
+            };
+
+            List<Llamada> llamadas = new List<Llamada> { llamada1, llamada2, llamada3, llamada4, llamada5 };
             #endregion
             #region seleccion
             Llamada seleccion = new Llamada();
@@ -426,10 +1020,10 @@ namespace PPAI_CU44_G1_3K6.Controllers
         [Route("api/tomarOpcionDeImpresion")]
         //recibo objeto llamadaSeleccionada
         //devuelvo el csv creado
-        public string tomarOpcionDeImpresion(LlamadaSeleccionada llamadaSelec)
+        public bool tomarOpcionDeImpresion(LlamadaSeleccionada llamadaSelec)
         {
             return generarCSV(llamadaSelec);
-            string generarCSV(LlamadaSeleccionada llamadaSeleccionada)
+            bool generarCSV(LlamadaSeleccionada llamadaSeleccionada)
             {
                 string csv = llamadaSeleccionada.nombre.ToString() + "," + llamadaSeleccionada.estado.ToString() + "," + llamadaSeleccionada.duracion.ToString();
                 foreach (var pregunta in llamadaSeleccionada.preguntaRespuestas)
@@ -438,7 +1032,8 @@ namespace PPAI_CU44_G1_3K6.Controllers
                     csv = string.Concat(csv, pregRes);
                 }
                 var llamarMetodo = new LlamadaSeleccionada();
-                return llamarMetodo.generarCSV(csv);
+                llamarMetodo.generarCSV(csv);
+                return true;
             };
         }
     }
